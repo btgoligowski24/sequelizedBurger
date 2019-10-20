@@ -3,19 +3,21 @@ const express = require("express");
 const PORT = process.env.PORT || 8080;
 const app = express();
 const exphbs = require("express-handlebars");
-const routes = require("./controllers/burger_controller");
 const path = require("path");
+const db = require("./models")
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, "/public")));
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-app.use(routes);
+require("./routes/burger-html-routes")(app);
+require("./routes/burger-api-routes")(app);
 
-
-app.listen(PORT, () => {
-    console.log("Server listening on: http://localhost:" + PORT);
+db.sequelize.sync({force: true}).then(function() {
+    app.listen(PORT, () => {
+        console.log("Server listening on: http://localhost:" + PORT);
+    });
 });
