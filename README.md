@@ -1,13 +1,13 @@
-# burger
+# sequelizedBurger
 
 ## What Problem Does the App Solve
-This app is a continuation of me learning express.js. It reinforces CRU requests and how to use those to handle traffic and displays. It is also my first introduction to ORMs and express-handlebars. This ORM I created myself as to understand what's going on behind the scenes, but it's also to show that it is much nicer with a pre-built library.
+This app is a continuation of me learning express.js and express-handlebars. It reinforces CRU requests and how to use those to handle traffic and views. It is introduces me to sequelize as an ORM. 
 
 ## App Overiew
 The app is organized by using standard MVC format.
 
 ## How to Use the App
-1. Navigate to https://mysterious-retreat-22990.herokuapp.com/
+1. Navigate to https://serene-meadow-35844.herokuapp.com/
 1. You have the following options:
     * Click the "DEVOUR IT" button to eat the burger, moving it to the eaten column.
     * Click the "MAKE ME ANOTHER" button to create another of the same burger, putting it in the available column.
@@ -22,6 +22,7 @@ The app is organized by using standard MVC format.
     * mysql
     * dotenv
     * express-handlebars
+    * sequelize
 
 ## Contributors
 I am the sole contributor to this project at this time. This likely will not be updated and maintained going forward.
