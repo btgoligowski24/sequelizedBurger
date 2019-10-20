@@ -5,12 +5,13 @@
                 <img class="img-fluid rounded mx-auto" src="/assets/img/burger.jpg" style="width: 15rem">
             </div>
             <div class="col-8 m-auto">
-                <h1 class="font-weight-bold">GOOD EATS!!!</h1>
+                <h1 class="font-weight-bold">ALL THE DELICIOUS BURGERS!!!</h1>
+                <p>well... mostly</p>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-6">
+        <div class="col-5">
             <div id="availBurgers" class="card mx-auto text-white bg-dark">
                 <div class="card-header">
                     <h4 class="text-center">
@@ -26,11 +27,24 @@
                 </ul>
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-2">
+            <form>
+                <div class="form-group">
+                    <label for="patronSelect">Patron</label>
+                    <select class="form-control" id="patronSelect">
+                        <option value="">Select a patron</option>
+                        {{#each patrons}}
+                            <option value={{id}}>{{name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="col-5">
             <div id="eatenBurgers" class="card mx-auto text-white bg-dark">
                 <div class="card-header">
                     <h4 class="text-center">
-                        Burgers In My Belly!
+                        Burgers In Bellies!
                     </h4>
                 </div>
                 <ul class="list-group list-group-flush">
